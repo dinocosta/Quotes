@@ -11,17 +11,16 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-	@IBOutlet weak var window: NSWindow!
-
+	let statusItem: NSStatusItem =
+		NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
-		// Insert code here to initialize your application
+		// Change status bar icon and tell OSX to invert image in dark mode.
+		if let icon = NSImage(named: "StatusBarIcon") {
+			statusItem.image	= icon
+			icon.template			= true
+		}
 	}
-
-	func applicationWillTerminate(aNotification: NSNotification) {
-		// Insert code here to tear down your application
-	}
-
 
 }
 
