@@ -39,15 +39,22 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 			let session = NSURLSession.sharedSession()
 			session.dataTaskWithURL(url) {
 				[unowned self] (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
-				if let data = data {
+				if let data = data, JSONString = NSString(data: data, encoding: NSUTF8StringEncoding) {
+					// Remove '\' from the quoteText field to prevent JSON Serialization from failing.
+					let fixedString	=
+						JSONString.stringByReplacingOccurrencesOfString("\\", withString: "") as NSString
+					let fixedData		= fixedString.dataUsingEncoding(NSUTF8StringEncoding)
+					
 					do {
 						// Try to convert data to JSON and extract the author and the quote.
-						let json = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments)
+						let json = try NSJSONSerialization.JSONObjectWithData(fixedData!,
+							options: NSJSONReadingOptions())
 						
 						// Get the quote text from the JSON, trimming it.
 						if let jsonQuote = json["quoteText"] as? String {
 							self.quote = jsonQuote
 							.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+							.stringByReplacingOccurrencesOfString("\\", withString: "")
 							self.quote = "\"\(self.quote)\""
 						} else { self.quote = "\"Something went wrong :/\"" }
 						
@@ -55,7 +62,9 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 						if let jsonAuthor = json["quoteAuthor"] as? String {
 							self.author = jsonAuthor
   							.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
-						} else { self.author = "Unknown" }
+							
+							if self.author == "" { self.author = "Unknown" }
+						}
 					} catch {
 						// Failure reading JSON.
 						self.quote	= "Something went wrong! Try again."
