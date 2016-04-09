@@ -10,6 +10,8 @@
 		EFB84D6E1CB9344E004CE778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB84D6D1CB9344E004CE778 /* AppDelegate.swift */; };
 		EFB84D701CB9344E004CE778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D6F1CB9344E004CE778 /* Assets.xcassets */; };
 		EFB84D731CB9344E004CE778 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D711CB9344E004CE778 /* MainMenu.xib */; };
+		EFB84D7C1CB937EB004CE778 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */; };
+		EFB84D7D1CB937EB004CE778 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +20,8 @@
 		EFB84D6F1CB9344E004CE778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFB84D721CB9344E004CE778 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		EFB84D741CB9344E004CE778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
+		EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 			children = (
 				EFB84D6D1CB9344E004CE778 /* AppDelegate.swift */,
 				EFB84D6F1CB9344E004CE778 /* Assets.xcassets */,
+				EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */,
+				EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */,
 				EFB84D711CB9344E004CE778 /* MainMenu.xib */,
 				EFB84D741CB9344E004CE778 /* Info.plist */,
 			);
@@ -118,6 +124,7 @@
 			files = (
 				EFB84D701CB9344E004CE778 /* Assets.xcassets in Resources */,
 				EFB84D731CB9344E004CE778 /* MainMenu.xib in Resources */,
+				EFB84D7D1CB937EB004CE778 /* PopoverViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -128,6 +135,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB84D7C1CB937EB004CE778 /* PopoverViewController.swift in Sources */,
 				EFB84D6E1CB9344E004CE778 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
