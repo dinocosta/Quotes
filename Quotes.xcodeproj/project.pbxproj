@@ -12,6 +12,7 @@
 		EFB84D731CB9344E004CE778 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D711CB9344E004CE778 /* MainMenu.xib */; };
 		EFB84D7C1CB937EB004CE778 /* PopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */; };
 		EFB84D7D1CB937EB004CE778 /* PopoverViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */; };
+		EFB84D7F1CB93F1A004CE778 /* EventMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB84D7E1CB93F1A004CE778 /* EventMonitor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		EFB84D741CB9344E004CE778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopoverViewController.swift; sourceTree = "<group>"; };
 		EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PopoverViewController.xib; sourceTree = "<group>"; };
+		EFB84D7E1CB93F1A004CE778 /* EventMonitor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventMonitor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */,
 				EFB84D711CB9344E004CE778 /* MainMenu.xib */,
 				EFB84D741CB9344E004CE778 /* Info.plist */,
+				EFB84D7E1CB93F1A004CE778 /* EventMonitor.swift */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFB84D7F1CB93F1A004CE778 /* EventMonitor.swift in Sources */,
 				EFB84D7C1CB937EB004CE778 /* PopoverViewController.swift in Sources */,
 				EFB84D6E1CB9344E004CE778 /* AppDelegate.swift in Sources */,
 			);

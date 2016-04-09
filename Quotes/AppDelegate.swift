@@ -14,6 +14,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	var statusItem: NSStatusItem	=
 		NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
 	let popover: NSPopover				= NSPopover()
+	var eventMonitor: EventMonitor?
 
 	func applicationDidFinishLaunching(aNotification: NSNotification) {
 		// Change status bar icon and tell OSX to invert image in dark mode.
@@ -27,6 +28,14 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 		
 		// Change status item action to toggle popover.
 		statusItem.button?.action			= #selector(togglePopover)
+		
+		// Create an event monitor to listen when the mouse is clicked outside the popover
+		// and close the popover.
+		eventMonitor = EventMonitor(mask: [.LeftMouseDownMask, .RightMouseDownMask]) {
+			[unowned self] event -> () in
+    		if self.popover.shown { self.closePopover(event) }
+  		}
+		eventMonitor?.start()
 	}
 	
 	// Toggle Popover, show if hidden and hide if shown.
