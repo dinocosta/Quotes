@@ -26,10 +26,51 @@
                         <action selector="quitApp:" target="-2" id="Paa-aN-ixf"/>
                     </connections>
                 </button>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-FB-t4u">
+                    <rect key="frame" x="7" y="47" width="455" height="190"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="uB0-Yi-BaU">
+                        <font key="font" metaFont="system" size="16"/>
+                        <string key="title">“I have no special talent. 
+I am only passionately curious.”</string>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-Jt-XGY">
+                    <rect key="frame" x="34" y="20" width="399" height="19"/>
+                    <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Albert Einstein" id="9S6-nl-9H2">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJF-jM-QGG">
+                    <rect key="frame" x="439" y="21" width="21" height="19"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Awy-nT-keg">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-kE-iCA">
+                    <rect key="frame" x="439" y="244" width="21" height="21"/>
+                    <buttonCell key="cell" type="help" title="?" bezelStyle="helpButton" alignment="center" imageScaling="proportionallyDown" inset="2" id="V8j-6A-8YL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-M2-4RK">
+                    <rect key="frame" x="9" y="20" width="21" height="21"/>
+                    <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Bad-S7-o6j">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
             </subviews>
         </customView>
     </objects>
     <resources>
+        <image name="NSGoLeftTemplate" width="9" height="12"/>
+        <image name="NSGoRightTemplate" width="9" height="12"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
     </resources>
 </document>
