@@ -7,17 +7,19 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PopoverViewController" customModule="Quotes" customModuleProvider="target">
             <connections>
+                <outlet property="authorTextField" destination="8zh-Jt-XGY" id="b01-eh-aSH"/>
+                <outlet property="quoteTextField" destination="FP4-FB-t4u" id="EV3-Cr-pdl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
         <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
         <customObject id="-3" userLabel="Application" customClass="NSObject"/>
         <customView id="Hz6-mo-xeY">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="272"/>
+            <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SQp-wk-EUX">
-                    <rect key="frame" x="9" y="245" width="21" height="18"/>
+                    <rect key="frame" x="18" y="161" width="21" height="19"/>
                     <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="NSStopProgressTemplate" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="XVT-ks-cK2">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="cellTitle"/>
@@ -27,7 +29,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-FB-t4u">
-                    <rect key="frame" x="7" y="47" width="455" height="190"/>
+                    <rect key="frame" x="18" y="78" width="444" height="54"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" id="uB0-Yi-BaU">
                         <font key="font" metaFont="system" size="16"/>
                         <string key="title">“I have no special talent. 
@@ -36,8 +38,18 @@ I am only passionately curious.”</string>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-kE-iCA">
+                    <rect key="frame" x="437" y="158" width="25" height="25"/>
+                    <buttonCell key="cell" type="help" title="?" bezelStyle="helpButton" alignment="center" imageScaling="proportionallyDown" inset="2" id="V8j-6A-8YL">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="openGithubPage:" target="-2" id="l3a-Jz-Ggd"/>
+                    </connections>
+                </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-Jt-XGY">
-                    <rect key="frame" x="34" y="20" width="399" height="19"/>
+                    <rect key="frame" x="47" y="20" width="388" height="19"/>
                     <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Albert Einstein" id="9S6-nl-9H2">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -45,27 +57,24 @@ I am only passionately curious.”</string>
                     </textFieldCell>
                 </textField>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iJF-jM-QGG">
-                    <rect key="frame" x="439" y="21" width="21" height="19"/>
+                    <rect key="frame" x="441" y="21" width="21" height="19"/>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSGoRightTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Awy-nT-keg">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
-                </button>
-                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-kE-iCA">
-                    <rect key="frame" x="439" y="244" width="21" height="21"/>
-                    <buttonCell key="cell" type="help" title="?" bezelStyle="helpButton" alignment="center" imageScaling="proportionallyDown" inset="2" id="V8j-6A-8YL">
-                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                        <font key="font" metaFont="system"/>
-                    </buttonCell>
+                    <connections>
+                        <action selector="newQuote:" target="-2" id="peC-18-0GL"/>
+                    </connections>
                 </button>
                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-M2-4RK">
-                    <rect key="frame" x="9" y="20" width="21" height="21"/>
+                    <rect key="frame" x="20" y="20" width="21" height="21"/>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Bad-S7-o6j">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                 </button>
             </subviews>
+            <point key="canvasLocation" x="433" y="344"/>
         </customView>
     </objects>
     <resources>

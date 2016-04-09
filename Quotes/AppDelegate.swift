@@ -9,14 +9,14 @@
 import Cocoa
 
 @NSApplicationMain
-class AppDelegate: NSObject, NSApplicationDelegate {
+public class AppDelegate: NSObject, NSApplicationDelegate {
 
-	var statusItem: NSStatusItem	=
+	private var statusItem: NSStatusItem	=
 		NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
-	let popover: NSPopover				= NSPopover()
-	var eventMonitor: EventMonitor?
+	private let popover: NSPopover				= NSPopover()
+	private var eventMonitor: EventMonitor?
 
-	func applicationDidFinishLaunching(aNotification: NSNotification) {
+	public func applicationDidFinishLaunching(aNotification: NSNotification) {
 		// Change status bar icon and tell OSX to invert image in dark mode.
 		if let icon = NSImage(named: "StatusBarIcon") {
 			statusItem.image	= icon
@@ -39,20 +39,20 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 	}
 	
 	// Toggle Popover, show if hidden and hide if shown.
-	func togglePopover(sender: AnyObject?) {
+	public func togglePopover(sender: AnyObject?) {
 		if popover.shown	{ closePopover(sender) }
 		else								{ showPopover(sender) }
 	}
 		
 	// Show popover.
-	func showPopover(sender: AnyObject?) {
+	private func showPopover(sender: AnyObject?) {
 		if let button = sender as? NSStatusBarButton {
 			popover.showRelativeToRect(button.bounds, ofView: button, preferredEdge: NSRectEdge.MinY)
 		}
 	}
 	
 	// Close Popover.
-	func closePopover(sender: AnyObject?) {
+	private func closePopover(sender: AnyObject?) {
 		popover.performClose(sender)
 	}
 }
