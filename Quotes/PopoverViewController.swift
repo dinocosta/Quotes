@@ -21,6 +21,9 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	var author: String = "You" {
 		didSet { authorTextField.stringValue = author }
 	}
+	var connected: Bool {
+		get { return Reachability.isConnectedToNetwork() }
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -70,8 +73,12 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 						self.quote	= "Something went wrong! Try again."
 						self.author	= "This App"
 					}
-				} else if let error = error {
-					print(error.localizedDescription)
+				} else if error != nil {
+					// No Internet Connection.
+					if !self.connected {
+						self.quote	= "\"It seems that you are not connected to the internet!\""
+						self.author	= "This App"
+					}
 				}
 			}.resume()
 		}

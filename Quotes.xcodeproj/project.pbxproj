@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF7312D61CBA9FEA000E51F4 /* Reachibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF7312D51CBA9FEA000E51F4 /* Reachibility.swift */; };
 		EFB84D6E1CB9344E004CE778 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFB84D6D1CB9344E004CE778 /* AppDelegate.swift */; };
 		EFB84D701CB9344E004CE778 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D6F1CB9344E004CE778 /* Assets.xcassets */; };
 		EFB84D731CB9344E004CE778 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EFB84D711CB9344E004CE778 /* MainMenu.xib */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EF7312D51CBA9FEA000E51F4 /* Reachibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachibility.swift; sourceTree = "<group>"; };
 		EFB84D6A1CB9344E004CE778 /* Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFB84D6D1CB9344E004CE778 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EFB84D6F1CB9344E004CE778 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				EFB84D6D1CB9344E004CE778 /* AppDelegate.swift */,
 				EFB84D6F1CB9344E004CE778 /* Assets.xcassets */,
 				EFB84D7A1CB937EB004CE778 /* PopoverViewController.swift */,
+				EF7312D51CBA9FEA000E51F4 /* Reachibility.swift */,
 				EFB84D7B1CB937EB004CE778 /* PopoverViewController.xib */,
 				EFB84D711CB9344E004CE778 /* MainMenu.xib */,
 				EFB84D741CB9344E004CE778 /* Info.plist */,
@@ -141,6 +144,7 @@
 			files = (
 				EFB84D7F1CB93F1A004CE778 /* EventMonitor.swift in Sources */,
 				EFB84D7C1CB937EB004CE778 /* PopoverViewController.swift in Sources */,
+				EF7312D61CBA9FEA000E51F4 /* Reachibility.swift in Sources */,
 				EFB84D6E1CB9344E004CE778 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
