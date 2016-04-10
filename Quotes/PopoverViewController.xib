@@ -75,6 +75,16 @@ This is a 4th line.”</string>
                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUe-T3-Nm7">
+                    <rect key="frame" x="357" y="158" width="76" height="25"/>
+                    <buttonCell key="cell" type="square" title="Copy Quote" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="xSd-Lr-pmP">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="copyQuote:" target="-2" id="lah-ts-OyG"/>
+                    </connections>
+                </button>
             </subviews>
             <point key="canvasLocation" x="433" y="344"/>
         </customView>

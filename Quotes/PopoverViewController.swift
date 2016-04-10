@@ -86,4 +86,11 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 		}
 	}
 	
+	// Copy quote to clipboard.
+	@IBAction func copyQuote(sender: AnyObject?) {
+		let pasteBoard: NSPasteboard = NSPasteboard.generalPasteboard()
+		pasteBoard.clearContents()
+		pasteBoard.writeObjects(["\(quote) - \(author)\n"])
+	}
+	
 }
