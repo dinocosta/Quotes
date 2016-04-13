@@ -8,6 +8,7 @@
         <customObject id="-2" userLabel="File's Owner" customClass="PopoverViewController" customModule="Quotes" customModuleProvider="target">
             <connections>
                 <outlet property="authorTextField" destination="8zh-Jt-XGY" id="b01-eh-aSH"/>
+                <outlet property="playButton" destination="YIJ-wX-dJF" id="wTs-gW-XYC"/>
                 <outlet property="quoteTextField" destination="FP4-FB-t4u" id="EV3-Cr-pdl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -26,6 +27,16 @@
                     </buttonCell>
                     <connections>
                         <action selector="quitApp:" target="-2" id="Paa-aN-ixf"/>
+                    </connections>
+                </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIJ-wX-dJF">
+                    <rect key="frame" x="231" y="47" width="21" height="19"/>
+                    <buttonCell key="cell" type="roundRect" bezelStyle="roundedRect" image="PlayIcon" imagePosition="only" alignment="center" state="on" imageScaling="proportionallyDown" inset="2" id="Jkv-uv-1M8">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="cellTitle"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sayQuote:" target="-2" id="ISK-sf-s0o"/>
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zh-Jt-XGY">
@@ -64,7 +75,7 @@
                     </connections>
                 </button>
                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FP4-FB-t4u">
-                    <rect key="frame" x="18" y="62" width="444" height="76"/>
+                    <rect key="frame" x="18" y="74" width="444" height="76"/>
                     <textFieldCell key="cell" selectable="YES" sendsActionOnEndEditing="YES" alignment="center" id="uB0-Yi-BaU">
                         <font key="font" metaFont="systemLight" size="16"/>
                         <string key="title">“I have no special talent. 
@@ -76,7 +87,7 @@ This is a 4th line.”</string>
                     </textFieldCell>
                 </textField>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BUe-T3-Nm7">
-                    <rect key="frame" x="357" y="158" width="76" height="25"/>
+                    <rect key="frame" x="349" y="158" width="76" height="25"/>
                     <buttonCell key="cell" type="square" title="Copy Quote" bezelStyle="shadowlessSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="xSd-Lr-pmP">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
@@ -93,5 +104,6 @@ This is a 4th line.”</string>
         <image name="NSGoLeftTemplate" width="9" height="12"/>
         <image name="NSGoRightTemplate" width="9" height="12"/>
         <image name="NSStopProgressTemplate" width="11" height="11"/>
+        <image name="PlayIcon" width="128" height="128"/>
     </resources>
 </document>

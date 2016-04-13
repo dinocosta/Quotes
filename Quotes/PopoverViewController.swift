@@ -12,6 +12,7 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	
 	@IBOutlet weak var quoteTextField: NSTextField!
 	@IBOutlet weak var authorTextField: NSTextField!
+	@IBOutlet weak var playButton: NSButton!
 	
 	let url: NSURL? =
 		NSURL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
@@ -27,7 +28,11 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do view setup here.
+		
+		// Change plya button icon and tell OSX to invert it in dark mode.
+		let playIcon				= NSImage(named: "PlayIcon")
+		playIcon?.template	= true
+		playButton.image		= playIcon
 	}
 	
 	// Quit Application.
@@ -100,4 +105,10 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 		pasteBoard.writeObjects(["\(quote) - \(author)\n"])
 	}
 	
+	@IBAction func sayQuote(sender: AnyObject?) {
+		let task: NSTask	= NSTask()
+		task.launchPath		= "/usr/bin/say"
+		task.arguments		= ["--voice=Alex", "\(quote) - \(author)\n"]
+		task.launch()
+	}
 }
