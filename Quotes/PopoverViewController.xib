@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="authorTextField" destination="8zh-Jt-XGY" id="b01-eh-aSH"/>
                 <outlet property="playButton" destination="YIJ-wX-dJF" id="wTs-gW-XYC"/>
+                <outlet property="previousButton" destination="V7v-M2-4RK" id="iLN-u0-JDO"/>
                 <outlet property="quoteTextField" destination="FP4-FB-t4u" id="EV3-Cr-pdl"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
@@ -54,15 +55,18 @@
                         <font key="font" metaFont="system"/>
                     </buttonCell>
                     <connections>
-                        <action selector="newQuote:" target="-2" id="peC-18-0GL"/>
+                        <action selector="nextQuote:" target="-2" id="KF4-pV-tUY"/>
                     </connections>
                 </button>
-                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-M2-4RK">
+                <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7v-M2-4RK">
                     <rect key="frame" x="20" y="20" width="21" height="21"/>
                     <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSGoLeftTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyDown" inset="2" id="Bad-S7-o6j">
                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                         <font key="font" metaFont="system"/>
                     </buttonCell>
+                    <connections>
+                        <action selector="previousQuote:" target="-2" id="AB4-cP-PbF"/>
+                    </connections>
                 </button>
                 <button horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UFt-kE-iCA">
                     <rect key="frame" x="437" y="158" width="25" height="25"/>
