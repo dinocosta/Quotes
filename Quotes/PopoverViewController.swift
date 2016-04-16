@@ -14,9 +14,12 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	@IBOutlet weak var authorTextField: NSTextField!
 	@IBOutlet weak var playButton: NSButton!
 	
-	let url: NSURL? =
+	let url: NSURL?	=
 		NSURL(string: "http://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=json")
-	var quote: String = "Hello World" {
+	let playIcon: NSImage = NSImage(named: "PlayIcon")!
+	let stopIcon: NSImage = NSImage(named: "StopIcon")!
+	
+	var quote: String	= "Hello World" {
 		didSet { quoteTextField.stringValue	= quote }
 	}
 	var author: String = "You" {
@@ -25,18 +28,21 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	var connected: Bool {
 		get { return Reachability.isConnectedToNetwork() }
 	}
+	var task: NSTask = NSTask()
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
-		// Change plya button icon and tell OSX to invert it in dark mode.
-		let playIcon				= NSImage(named: "PlayIcon")
-		playIcon?.template	= true
-		playButton.image		= playIcon
+		// Change play button icon and tell OSX to invert it in dark mode.
+		playIcon.template	= true
+		stopIcon.template	= true
+		playButton.image	= playIcon
 	}
 	
 	// Quit Application.
 	@IBAction func quitApp(sender: AnyObject?) {
+		// Stop say task if it is currently running.
+		if task.running { task.interrupt() }
 		NSApplication.sharedApplication().terminate(sender)
 	}
 	
@@ -106,9 +112,24 @@ class PopoverViewController: NSViewController, NSPopoverDelegate {
 	}
 	
 	@IBAction func sayQuote(sender: AnyObject?) {
-		let task: NSTask	= NSTask()
-		task.launchPath		= "/usr/bin/say"
-		task.arguments		= ["--voice=Alex", "\(quote) - \(author)\n"]
-		task.launch()
+		if task.running {
+			// Interrupt the current task and create a new one.
+			task.interrupt()
+			task = NSTask()
+		} else {
+			// Set the task launch path and arguments and launch it.
+			task.launchPath	= "/usr/bin/say"
+  		task.arguments	= ["--voice=Alex", "\(quote) - \(author)\n"]
+			
+			// Change play button icon before playing the quote.
+			playButton.image	= stopIcon
+			task.launch()
+			
+			task.terminationHandler = { [unowned self] _ -> Void in
+				// Change the play button to the play icon and create a new task.
+				self.playButton.image	= self.playIcon
+				self.task							= NSTask()
+			}
+		}
 	}
 }
