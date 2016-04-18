@@ -1,5 +1,5 @@
 # Quotes: A Swift Experiment
----
+
 Quotes is a Mac Menu Bar App built with Swift
 which uses the [Forismatic API](http://forismatic.com/en/api/) to present you
 with inspiring quotes.  If you don't like reading you can even make your
