@@ -8,10 +8,15 @@ computer read them to you!
 ![Screenshot](screenshot.png)
 
 This is just a personal project that enabled me to learn how to use Swift to
-build menu bar apps and how to use the some parts of the Cocoa Framework. 👍
+build menu bar apps and how to use the some parts of the Cocoa Framework.
 
 ## Requirements
 
 - Xcode 7.3
 - OSX 10.9+
+
+## Instructions
+
+Download the latest release and run: `make install`
+This moves the Quotes.app file to your /Applications folder.  👍
 
