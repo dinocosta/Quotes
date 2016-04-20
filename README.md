@@ -17,6 +17,6 @@ build menu bar apps and how to use the some parts of the Cocoa Framework.
 
 ## Instructions
 
-Download the latest release and run: `make install`
+Download the [latest release](https://github.com/JoaoFCosta/Quotes/releases) and run: `make install`
 This moves the Quotes.app file to your /Applications folder.  👍
 
