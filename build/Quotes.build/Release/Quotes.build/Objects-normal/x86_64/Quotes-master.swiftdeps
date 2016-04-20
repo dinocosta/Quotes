@@ -1,0 +1,8 @@
+version: "Apple Swift version 2.2 (swiftlang-703.0.18.1 clang-703.0.29)"
+options: "9c399dcf926faf7bc1fc0f9e8d972215"
+build_time: [514485243, 215023000]
+inputs:
+  "/Users/joaocosta/Developer/Quotes/Quotes/Quotes/EventMonitor.swift": [513903938, 0]
+  "/Users/joaocosta/Developer/Quotes/Quotes/Quotes/PopoverViewController.swift": [514130359, 0]
+  "/Users/joaocosta/Developer/Quotes/Quotes/Quotes/Reachibility.swift": [513903938, 0]
+  "/Users/joaocosta/Developer/Quotes/Quotes/Quotes/AppDelegate.swift": [513903938, 0]

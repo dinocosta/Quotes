@@ -1,6 +1,4 @@
 install:
-	make clean
-	make build
 	mv build/Release/Quotes.app /Applications
 
 build:
